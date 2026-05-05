@@ -1,0 +1,59 @@
+/* === Main Window === */
+window {
+    margin: 0px;
+    border-radius: 16px;
+    /* background-color: rgba(0, 0, 0, 0.95); */
+    background: rgba(17, 17, 27, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+/* === Search Bar === */
+#input {
+    margin: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    outline: none;
+}
+
+#input:focus {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* === Scrollable List === */
+#scroll {
+    margin: 0px 6px 6px 6px;
+}
+
+/* === Each App Entry === */
+#entry {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 2px 0px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#entry:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+/* === App Name Text === */
+#text {
+    margin-left: 10px;
+    color: #e0e0e0;
+}
+
+/* === App Icon === */
+#img {
+    border-radius: 6px;
+}
