@@ -20,7 +20,7 @@ window#waybar {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    /* color: #ffffff; */
+  
 }
 
 
@@ -32,7 +32,7 @@ window#waybar {
     border-radius: 14px;
     padding: 0 6px;
     margin: 0 4px;
-    /* box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4); */
+   
 }
 
 /* ── Workspaces ──────────────────────────────────────────── */
@@ -97,7 +97,7 @@ window#waybar {
     border-radius: 14px;
     padding: 0 4px;
     margin: 0 3px;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35); */
+    
 }
 
 /* ── Shared Module Style ─────────────────────────────────── */
@@ -216,6 +216,7 @@ window#waybar {
 #tray {
     padding: 0 6px;
     margin: 5px 1px;
+    border-radius: 8px; /* match your other modules */
 }
 
 #tray > .passive {
