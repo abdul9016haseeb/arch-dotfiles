@@ -48,6 +48,7 @@
     /* ── Left ───────────────────────────────────────── */
     "hyprland/workspaces": {
         "format": "{icon}",
+    //   "on-click": "activate",
         "format-icons": {
             "1": "󰲠",
             "2": "󰲢",
@@ -59,8 +60,8 @@
         },
         "persistent-workspaces": {
             "*": 5
-        },
-        "on-click": "activate"
+        }
+        
     },
     // "hyprland/window": {
     //     "format": " {}",
@@ -165,8 +166,8 @@
         //     "󰪤",
         //     "󰪥"
         // ],
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": false
     },
     "network": {
@@ -194,8 +195,8 @@
             ]
         },
         "on-click": "pavucontrol",
-        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0",
-        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+ -l 1.0",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
         "tooltip": true,
         "tooltip-format": "{desc}"
     },
