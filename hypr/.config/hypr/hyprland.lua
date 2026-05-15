@@ -194,7 +194,7 @@ hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 
 -- 4-finger swipe up → open wofi
 hl.gesture({ fingers = 4, direction = "swipe", action = function()
-    hl.exec_cmd("wofi --show drun")
+    hl.exec_cmd("pkill wofi || " .. menu)
 end })
 
 
@@ -237,6 +237,12 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:mag
 -- Scroll through workspaces
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+
+-- click = toggle float, drag = move window (mobile-like feel)
+hl.config({ binds = { drag_threshold = 10 } })
+
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
+-- hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Screenshots
 hl.bind("Print",       hl.dsp.exec_cmd("~/.config/hypr/screenshot.sh"))
