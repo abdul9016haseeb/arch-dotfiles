@@ -74,7 +74,7 @@ hl.env("HYPRCURSOR_SIZE",                  "24")
 
 local mainMod = "SUPER"
 local terminal = "kitty"
-local fileManager = "dolphin"
+local fileManager = "nautilus"
 local menu = "wofi --show drun"
 
 -------------------
@@ -97,7 +97,7 @@ end)
 hl.config({
     general = {
         gaps_in         = 5,
-        gaps_out        = 15,
+        gaps_out        = 10,
         border_size     = 2,
         col = {
             active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
@@ -241,8 +241,8 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 -- click = toggle float, drag = move window (mobile-like feel)
 hl.config({ binds = { drag_threshold = 10 } })
 
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
--- hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind("ALT + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind("ALT + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 
 -- Screenshots
 hl.bind("Print",       hl.dsp.exec_cmd("~/.config/hypr/screenshot.sh"))
@@ -286,6 +286,7 @@ hl.window_rule({
         pin        = false,
     },
     no_focus = true,
+    -- no_focus = false,
 })
 
 hl.window_rule({
