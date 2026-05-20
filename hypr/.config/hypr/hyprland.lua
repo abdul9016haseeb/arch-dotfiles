@@ -96,8 +96,8 @@ end)
 
 hl.config({
     general = {
-        gaps_in         = 5,
-        gaps_out        = 10,
+        gaps_in         = 3.5,
+        gaps_out        = 8,
         border_size     = 2,
         col = {
             active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
@@ -164,7 +164,7 @@ hl.config({
 ----------------------
 
 hl.curve("wind",   { type = "bezier", points = { {0.05, 0.9}, {0.1, 1.05} } })
-hl.curve("winIn",  { type = "bezier", points = { {0.1, 1.05}, {0.1, 1.05} } })
+hl.curve("winIn",  { type = "bezier", points = { {0.1, 1.03}, {0.1, 1.03} } })
 hl.curve("winOut", { type = "bezier", points = { {0.3, 0.0},  {0, 1}     } })
 hl.curve("liner",  { type = "bezier", points = { {1, 1},      {1, 1}     } })
 
@@ -205,6 +205,12 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
+
+-- bind = {
+--   { "SUPER", "B", "exec",  },
+-- }
+
 -- Super key alone (release) → toggle wofi
 hl.bind(mainMod .. " + Super_L", hl.dsp.exec_cmd("pkill wofi || " .. menu), { release = true })
 
@@ -224,8 +230,8 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down"  }))
 
 -- Workspaces
 for i = 1, 9 do
-    hl.bind(mainMod .. " + " .. i,               hl.dsp.focus({ workspace = i }))
-    hl.bind(mainMod .. " + SHIFT + " .. i,       hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + " .. i,               hl.dsp.focus({ workspace = tostring(i) }))
+    hl.bind(mainMod .. " + SHIFT + " .. i,       hl.dsp.window.move({ workspace = tostring(i) }))
 end
 hl.bind(mainMod .. " + 0",         hl.dsp.focus({ workspace = 10 }))
 hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
@@ -288,6 +294,8 @@ hl.window_rule({
     no_focus = true,
     -- no_focus = false,
 })
+
+
 
 hl.window_rule({
     name  = "move-hyprland-run",
