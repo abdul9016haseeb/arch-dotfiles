@@ -51,6 +51,8 @@ window#waybar {
     min-width: 0;
 }
 
+
+
 #workspaces button.active {
     color: #89b4fa;
     background: rgba(137, 180, 250, 0.12);

@@ -48,7 +48,21 @@
     /* ── Left ───────────────────────────────────────── */
     "hyprland/workspaces": {
         "format": "{icon}",
-    //   "on-click": "activate",
+        // "format-window-separator": " ",
+        // "window-rewrite-default": "󰘔",
+        // "window-rewrite": {
+        //     "class<kitty>": "",
+        //     "class<brave-browser>": "󰖟",
+        //     "class<firefox>": "󰈹",
+        //     "class<code-oss>": "󰨞",
+        //     "class<obsidian>": "󱓧",
+        //     "class<discord>": "󰙯",
+        //     "class<spotify>": "󰓇",
+        //     "class<thunar>": "󰝰",
+        //     "class<telegram-desktop>": "󰖣",
+        //     "title<.*YouTube.*>": "󰗃"
+        // },
+        //   "on-click": "activate",
         "format-icons": {
             "1": "󰲠",
             "2": "󰲢",
@@ -61,7 +75,6 @@
         "persistent-workspaces": {
             "*": 5
         }
-        
     },
     // "hyprland/window": {
     //     "format": " {}",
@@ -112,7 +125,7 @@
     },
     /* ── Status Group ───────────────────────────────── */
     "battery": {
-	"interval":30,
+        "interval": 30,
         "states": {
             "good": 80,
             "warning": 30,
