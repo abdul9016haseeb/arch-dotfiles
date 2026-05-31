@@ -97,7 +97,7 @@ end)
 
 hl.config({
     general = {
-        gaps_in         = 3.5,
+        gaps_in         = 2,
         gaps_out        = 8,
         border_size     = 2,
         col = {
