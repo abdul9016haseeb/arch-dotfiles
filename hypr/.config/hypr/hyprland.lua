@@ -49,25 +49,27 @@ hl.monitor({
     output = "eDP-1",
     mode   = "1920x1200@60",
     position = "0x0",
-    scale    = 1.5,
+    scale    = 1.25,
 })
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("GDK_SCALE",                        "1.5")
+hl.env("GDK_SCALE",                        "1")
 hl.env("GDK_DPI_SCALE",                    "1")
 hl.env("QT_QPA_PLATFORMTHEME",             "qt6ct")
 hl.env("QT_QPA_PLATFORM",                  "wayland;xcb")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
-hl.env("QT_SCALE_FACTOR", "1.5")
+hl.env("QT_SCALE_FACTOR", "1")
 hl.env("MOZ_ENABLE_WAYLAND",               "1")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT",     "wayland")
 hl.env("GDK_BACKEND",                      "wayland,x11")
 hl.env("GTK_THEME",                        "Adwaita:dark")
 hl.env("XCURSOR_SIZE",                     "24")
 hl.env("HYPRCURSOR_SIZE",                  "24")
+
+
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -83,12 +85,13 @@ local menu = "wofi --show drun"
 -------------------
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("nm-applet")
-    hl.exec_cmd("waybar")
+    -- hl.exec_cmd("nm-applet")
+    -- hl.exec_cmd("waybar")
+    hl.exec_cmd("dms run")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
-    hl.exec_cmd("awww-daemon --no-cache")
+    -- hl.exec_cmd("awww-daemon --no-cache")
     -- set wallpaper after daemon starts
-    hl.exec_cmd("sleep 1 && awww img /home/abdul/Pictures/linux-customization-wallpaper-settings/minato-namikaze-magick-1920x1200.png --transition-type none")
+    -- hl.exec_cmd("sleep 1 && awww img /home/abdul/Pictures/linux-customization-wallpaper-settings/minato-namikaze-magick-1920x1200.png --transition-type none")
 end)
 
 -----------------------
@@ -112,13 +115,19 @@ hl.config({
     decoration = {
         rounding       = 10,
         rounding_power = 2,
-        active_opacity   = 1.0,
-        inactive_opacity = 1.0,
+        active_opacity   = 0.95,
+        inactive_opacity = 0.95,
         shadow = {
             enabled = false,
+            -- range = 4,
+            -- render_power = 3,
+            -- color = rgba(1a,1a1,aee),
         },
         blur = {
             enabled = false,
+            -- size = 3,
+            -- passes = 1,
+            -- vibrancy = 0.1696,
         },
     },
 
