@@ -102,9 +102,14 @@ hl.config({
     general = {
         gaps_in         = 2,
         gaps_out        = 8,
-        border_size     = 2,
+        border_size     = 1,
         col = {
-            active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+            -- active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+            -- Lavender to blue
+            -- -- Soft pink to lavender
+            -- active_border = { colors = { "rgba(F2CDCDff)", "rgba(D0BCFFff)" }, angle = 45 },
+            -- --  active_border   = "rgba(8652ffff)",
+            active_border = { colors = { "rgba(D0BCFFff)", "rgba(89B4FAff)" }, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
         resize_on_border = false,
